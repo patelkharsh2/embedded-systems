@@ -13,15 +13,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Set variables for the library names
 set(C_LIBRARY int_arithmetic)
 set(CPP_LIBRARY double_arithmetic)
+file(GLOB SOURCES_CPP "src/*.cpp")
+file(GLOB SOURCES_C "src/*.c")
 
 # Add source files for the executable
 add_executable(cppmath main.cpp)
 
 # Add a static library for C
-add_library(${C_LIBRARY} STATIC add_int.c sub_int.c mult_int.c div_int.c)
+add_library(${C_LIBRARY} STATIC ${SOURCES_C})
 
 # Add a static library for C++
-add_library(${CPP_LIBRARY} STATIC add_double.cpp sub_double.cpp mult_double.cpp div_double.cpp)
+add_library(${CPP_LIBRARY} STATIC ${SOURCES_CPP})
 
 # Link the executable with both C and C++ libraries
 target_link_libraries(cppmath ${C_LIBRARY} ${CPP_LIBRARY})
