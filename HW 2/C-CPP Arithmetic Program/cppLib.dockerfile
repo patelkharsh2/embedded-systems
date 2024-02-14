@@ -1,3 +1,4 @@
+#tag: patelkharsh2/cpplib-app
 FROM ubuntu:22.04
 
 RUN apt-get update && \
