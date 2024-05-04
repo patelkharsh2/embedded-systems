@@ -4,7 +4,7 @@
 ### Download the OS
 * Find and install the latest OS from this link:
 
-        `https://github.com/milkv-duo/duo-buildroot-sdk/releases/`
+    `https://github.com/milkv-duo/duo-buildroot-sdk/releases/`
 
 *Download "milkv-duo-v1.x.x-yyyy-mmdd.img.zip" not 256m*
 
@@ -42,8 +42,8 @@ For further instructions, please visit the [Milk-V](https://milkv.io/docs/duo/ge
 ### SSH into the DUO
 * Use the command:
     `ssh root@192.168.42.1`
-    * Password will be `milkv`
-* If there are any issues with DUO IP authencity, run this command:
+    * Password: `milkv`
+* If there are any issues with IP authencity, run this command:
     `ssh-keygen -R 192.168.42.1`
 
 
@@ -51,6 +51,7 @@ For more information on connecting to the DUO visit the [Milk-V](https://milkv.i
 
 ## Misc set-up
 * If you are running into any `not found` errors, run this command: 
+    
     ```ln -sf /lib/ld-musl-riscv64v0p7_xthead.so.1 /lib/ld-musl-riscv64xthead.so.1```
 
 ## Milk-V DUO Pinout
